@@ -54,9 +54,11 @@ SRC =	$(TARGET).c \
 # type "make clean" after changing this, so all files will be rebuilt
 #
 #MCU = at90usb162	# Teensy 1.0
-MCU = atmega32u4	# Teensy 2.0
+#MCU = atmega32u4	# Teensy 2.0
 #MCU = at90usb646	# Teensy++ 1.0
 #MCU = at90usb1286	# Teensy++ 2.0
+#MCU = atmega32u2
+MCU = atmega32u4
 
 
 # Processor frequency.
@@ -151,6 +153,7 @@ CFLAGS += -fpack-struct
 CFLAGS += -fshort-enums
 CFLAGS += -ffixed-3 -ffixed-4 -ffixed-5 -ffixed-16 -ffixed-17 -ffixed-26 -ffixed-27
 CFLAGS += -Wall
+CFLAGS += -Wno-volatile-register-var
 CFLAGS += -Wstrict-prototypes
 #CFLAGS += -mshort-calls
 #CFLAGS += -fno-unit-at-a-time
